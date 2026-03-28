@@ -2,13 +2,13 @@
 #include<string>
 int main(){
 
-    int idade = 17;
-    float altura = 1.73;
-    std::string nome = "Theodoro";
+   std::string nome;
 
-    std::cout<<"Meu nome é"<<nome<<"."<<std::endl;
-    std::cout<<"Minha altura é"<<altura<<"m."<<std::endl;
-    std::cout<<"Minha idade é"<<idade<<"anos."<<std::endl;
+   std::cout<<"Qual seu nome:"<<std::endl;
+   std::cin>>nome;
+
+    std::cout<<"Bem-vindo(a) "<<nome<<"!!"<<std::endl;
+
 
     return 0;
 }
