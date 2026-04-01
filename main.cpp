@@ -3,10 +3,11 @@
 
 int main(){
 
-    int a = 10;
-    int b = 6;
+    bool condicao = true;
+    bool condicao1 = false;
 
-    std::cout<<((a > b) && (a + b) >= 16)<<std::endl;
+    std::cout<<condicao<<std::endl;
+     std::cout<<condicao1<<std::endl;
 
     return 0;
 }
