@@ -3,19 +3,13 @@
 
 int main(){
 
-     std::string nome;
-    int idade;
-    int anoAtual = 2026;
+    int result1 = 4 + 4 * 2;
+    int result2 = 4 + 2 / 2;
+    int result3 = (4 + 4) * 2;
 
-   std::cout<<"Qual seu nome: "<<std::endl;
-   std::cin>>nome;
-
-   std::cout<<"Qual a sua idade: "<<std::endl;
-   std::cin>>idade;
-   int anoNascido = 2026 - idade;
-
-    std::cout<<"Bem-vindo(a) "<<nome<<"!!"<<"Nascido no ano de "<<anoNascido<<std::endl;
-
+    std::cout<<result1<<std::endl;
+    std::cout<<result2<<std::endl;
+    std::cout<<result3<<std::endl;
 
     return 0;
 }
