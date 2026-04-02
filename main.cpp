@@ -1,21 +1,13 @@
 #include<iostream>
-
+#include<string>
 
 int main(){
 
-    int num1, num2, soma;
+    std::string nome ="Theodoro";
+    std::string sobrenome = "Ternus";
 
-    std::cout<<"Digite num 1: "<<"\n";
-    std::cin>>num1;
-
-    std::cout<<"Digite num 2: "<<"\n";
-    std::cin>>num2;
-
-
-    soma + num1 + num2;
-
-    std::cout<<"O resultado da soma e "<<soma<<"\n";
-
+    std::cout<<nome + " " + sobrenome<<std::endl;
+ 
 
     return 0;
 }
