@@ -3,10 +3,13 @@
 
 int main(){
 
-   int sla[5] = {10,20,30,40,50};
+   std::string nome = "Theodoro";
 
-   std::cout<<sla[1];
- 
+   std::cout<<nome[0];
+   std::cout<<nome[2];
+   std::cout<<nome[nome.length() - 1]<<std::endl;
+   nome[0] = 'A';
+   std::cout<<nome<<std::endl;
 
 
     return 0;
