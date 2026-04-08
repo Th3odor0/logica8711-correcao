@@ -1,18 +1,14 @@
 #include<iostream>
 #include<string>
+#include<cmath>
 
 int main(){
 
-   std::string nome = "Theodoro";
-
-   std::cout<<nome[0];
-   std::cout<<nome[2];
-   std::cout<<nome[nome.length() - 1]<<std::endl;
-   nome[0] = 'A';
-   std::cout<<nome<<std::endl;
-   std::cout<<nome.at(0)<<std::endl;
-    nome.at(0) = 'H';
-    std::cout<<nome;
+   int a = 5;
+   int b = 3;
+   
+   std::cout<<std::max(a, b)<<std::endl;
+    
 
 
     return 0;
