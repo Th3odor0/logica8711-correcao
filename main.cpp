@@ -3,8 +3,8 @@
 
 int main(){
 
-   for(int l = 1; l <= 10; l++){
-    std::cout<<"Este e um loop!!"<<std::endl;
+   for(int hiroshima = 10; hiroshima >= 0; hiroshima--){
+    std::cout<<"a hiroshima ira explodir em..."<<hiroshima<<std::endl;
    }
 
     
