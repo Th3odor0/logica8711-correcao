@@ -4,14 +4,10 @@
 
 int main(){
 
-    
+    int myNumbers[5] = {10, 20, 30, 40, 50};
 
-    for(int i = 1; i <= 2; ++i){
-        std::cout<<"externo: "<<i<<std::endl;
-
-        for(int j = 1; j <= 3; ++j){
-            std::cout<<"interno: "<<j<<std::endl;
-        }
+    for(int num : myNumbers){
+        std::cout<<num<<std::endl;
         
     }
     
