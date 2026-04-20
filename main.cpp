@@ -8,18 +8,15 @@ int main(){
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
 
-    std::string carros[5] = {"volvo", "BMW", "ford", "chevrolet", "fiat"};
-
-    int tamanho = sizeof(carros) / sizeof(carros[0]);
-
-    std::cout<<tamanho<<std::endl;
-
-   // for (int i = 0; i < 5; i++)
+   int numeros[3];
+   numeros[0] = 10;
+    numeros[1] = 20;
+     numeros[2] = 30;
     
-    //    std::cout<<carros[i]<<std::endl;
-    
-    
-    
+    for (int i = 0; i < 3; i++)
+    {
+        std::cout<<numeros[i]<<std::endl;
+    }
     
 
 
