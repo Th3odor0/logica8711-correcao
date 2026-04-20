@@ -10,10 +10,14 @@ int main(){
 
     std::string carros[5] = {"volvo", "BMW", "ford", "chevrolet", "fiat"};
 
-    for (int i = 0; i < 5; i++)
-    {
-        std::cout<<carros[i]<<std::endl;
-    }
+    int tamanho = sizeof(carros) / sizeof(carros[0]);
+
+    std::cout<<tamanho<<std::endl;
+
+   // for (int i = 0; i < 5; i++)
+    
+    //    std::cout<<carros[i]<<std::endl;
+    
     
     
     
