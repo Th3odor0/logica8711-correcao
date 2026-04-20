@@ -1,21 +1,17 @@
 #include<iostream>
 #include<windows.h> 
+#include<string>
+
 
 int main(){
 
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
 
-    int myNumbers[5] = {10, 20, 30, 40, 50};
+    std::string nomes[3] = {"João", "Paula", "Murilo"};
+    int idades[3] = {27, 31, 20};
 
-    // for(int num : myNumbers){
-    //     std::cout<<num<<std::endl;
-        
-        
-
-        for(int i = 0; i < 5; ++i){
-            std::cout<<myNumbers[i]<<std::endl;
-        }
+    std::cout<<nomes[1]<<" tem "<<idades[1]<<" anos!"<<std::endl;
         
     
     
