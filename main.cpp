@@ -8,13 +8,11 @@ int main(){
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
 
-    int numeros[5] = {10, 20, 30, 40, 50};
+    std::string carros[5] = {"volvo", "BMW", "ford", "chevrolet", "fiat"};
 
-    int tamanho = std::size(numeros);
-
-    for (int i = 0; i < tamanho; i++)
+    for (int i = 0; i < 5; i++)
     {
-        std::cout<<numeros[i]<<std::endl;
+        std::cout<<carros[i]<<std::endl;
     }
     
     
