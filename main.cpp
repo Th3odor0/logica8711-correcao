@@ -3,8 +3,14 @@
 #include<string>
 #include<vector>
 
-void myFunction(){
-    std::cout<<"Olá mundo!"<<std::endl;
+void myFunction(float nota){
+    if (nota >= 7)
+    {
+        std::cout<<"Status: Aprovado!"<<std::endl;
+    }else{
+        std::cout<<"Status: Reprovado!"<<std::endl;
+    }
+    
 }
 
 int main(){
@@ -12,7 +18,9 @@ int main(){
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
 
-   myFunction();
+    float minhaNota = 8.5;
+   
+    myFunction(minhaNota);
     
     
       
