@@ -8,14 +8,13 @@ int main(){
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
 
-    std::vector<std::string>cars = {"Volvo", "BMW", "Mercedes"};
+    int myNumbers[5] = {1, 2, 3, 4, 5};
 
-    cars.push_back("Mazda");
-
-    for (std::string car : cars)
+    for (int i = 0; i < 5; i++)
     {
-        std::cout<<car<<std::endl;
+        std::cout<<myNumbers[i]<<std::endl;
     }
+    
     
     
       
