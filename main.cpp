@@ -1,20 +1,22 @@
 #include<iostream>
 #include<windows.h> 
 #include<string>
-
+#include<vector>
 
 int main(){
 
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
 
-    for (int i = 0; i < 10; i++)
+    std::vector<std::string>cars = {"Volvo", "BMW", "Mercedes"};
+
+    cars.push_back("Mazda");
+
+    for (std::string car : cars)
     {
-        if (i == 4){
-            break;
-        }
-        std::cout<<i<<std::endl;
+        std::cout<<car<<std::endl;
     }
+    
     
       
     return 0;
