@@ -3,8 +3,8 @@
 #include<string>
 #include<vector>
 
-void myFunction(std::string nome){
-    std::cout<<nome<<std::endl;
+void myFunction(std::string nome, int idade){
+    std::cout<<"Meu nome é "<<nome<<"e tenho "<<idade<<" anos. "<<std::endl;
     
     
     
@@ -15,8 +15,7 @@ int main(){
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
 
-   myFunction("Theodoro");
-   myFunction("Nome");
+   myFunction("Theodoro", 17);
     
     
       
