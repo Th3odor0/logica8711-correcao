@@ -3,8 +3,8 @@
 #include<string>
 #include<vector>
 
-int myFunction(int x){
-    return 5 + x;    
+int myFunction(int x, int y){
+    return x + y;    
 }
 
 int main(){
@@ -12,7 +12,7 @@ int main(){
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
 
-   std::cout<<myFunction(3)<<std::endl;
+   std::cout<<myFunction(5, 3)<<std::endl;
     
     
       
