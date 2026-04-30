@@ -7,28 +7,29 @@ int main(){
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
 
-  int choice;
-  float temp, converted;
+    //briAmount: valor em reais / exchangeRate: taxa de cambio / usdAmount: valor em dolares
+    double briAmount, exchangeRate, usdAmount;
 
-   std::cout<<"---- Temperatura converter ----"<<std::endl;
-   std::cout<<"1: celsius to fahrenheit"<<std::endl;
-   std::cout<<"2: fahrenheit to celsius"<<std::endl;
-   std::cout<<"choose an option (1 or 2): "<<std::endl;
-   std::cin>>choice;
+    std::cout<<"---- Currency converter: BRL to USD ----"<<std::endl;
 
-   if (choice == 1){
-    std::cout<<"Enter temperatura in celsius: "<<std::endl;
-    std::cin>>temp;
-    converted = (temp * 1.8) + 32;
-    std::cout<<temp<<"C is "<<converted<<" F. "<<std::endl;
-   }else if (choice == 2){
-    std::cout<<"Enter temparatura in Fahrenheit: "<<std::endl;
-    std::cin>>temp;
-    converted = (temp - 32) / 1.8;
-    std::cout<<temp<<"F is "<<converted<<" C. "<<std::endl;
-   }else{
-    std::cout<<"Invalid option! Please restart."<<std::endl;
-   }
+    //entrada da taxa de cambio (quanto vale 1 dolar hoje)
+    std::cout<<"Enter the current exchange rate (How much is 1 dollar in Reais?): "<<std::endl;
+    std::cin>>exchangeRate;
+
+    //entrada da quantia em reais que a pessoa deseja converter
+    std::cout<<"Enter the amount in BRL(R$): "<<std::endl;
+    std::cin>>briAmount;
+
+    //verificação logica: garante que o valor informado seja positivo
+    if (briAmount > 0){
+        //calculo: divede o montante em reais pela taxa de cambio
+        usdAmount = briAmount / exchangeRate;
+        std::cout<<"You will have $"<<usdAmount<<" US Dollars."<<std::endl;
+    }else{
+        //mensagem de erro caso o valor de reais pela taxa de cambio
+        std::cout<<"Error: Please enter a valid amount greater than zero."<<std::endl;
+    }
+    
    
     
     
