@@ -1,19 +1,30 @@
 #include<iostream>
 #include<windows.h> 
 #include<string>
-#include<vector>
-
-int myFunction(int x){
-    return x * 2;    
-}
 
 int main(){
 
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
 
-   for (int i = 0; i < 5; i++){
-    std::cout<<"O dobro de "<<i<<" é "<<myFunction(i)<<std::endl;
+   int opcao;
+   std::string nome;
+   int idade;
+
+   std::cout<<"----Escolha a opção adequada: "<<std::endl;
+   std::cout<<"Digite 1 para cadastrar ou 2 para sair: "<<std::endl;
+   std::cin>>opcao;
+
+   if (opcao == 1){
+    std::cout<<"Digite o nome: "<<std::endl;
+    std::cin>>nome;
+    std::cout<<"Digite a idade"<<std::endl;
+    std::cin>>idade;
+
+    std::cout<<"Seu nome é: "<<nome<<std::endl;
+    std::cout<<"Sua idade é: "<<idade<<std::endl;
+   }else{
+    std::cout<<"Até a próxima!"<<std::endl;
    }
    
     
