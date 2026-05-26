@@ -2,15 +2,31 @@
 #include<Windows.h>
 #include<format>
 
+long long calculadorafatorial(int n){
+long long resultado = 1;
+
+for(int i = 1; i <= n; i++){
+    resultado *= i;}
+return resultado;
+};
+
 int main(){
 
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
 
-  std::string nome = "Theodoro";
+    int numero;
 
-  std::string mensagem = std::format("Ola, {} voce tem {} anos.\n", nome);
-  std::cout<<mensagem;
+    std::cout<<"Digite um numero para calcular fatorial: "<<std::endl;
+    std::cin>>numero;
+
+    if (numero < 0){
+        std::cout<<"Erro: fatorial de numero negativos não existe"<<std::endl;
+    }else{
+        long long fatorial = calculadorafatorial(numero);
+        std::cout<<numero<<"! = "<<fatorial<<std::endl;
+    }
+    
 
 
 
