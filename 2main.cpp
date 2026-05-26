@@ -1,24 +1,16 @@
 #include<iostream>
 #include<Windows.h>
-
+#include<format>
 
 int main(){
 
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
 
-   int numero;
-   int contador = 0;
+  std::string nome = "Theodoro";
 
-   while (true){
-    std::cout<<"Digite um numero (0 para parar): ";
-    std::cin>>numero;
-    if (numero == 0){
-        break;
-    }
-    contador++;
-   }
-   std::cout<<"Você digitou "<<contador<<"numeros!"<<std::endl;
+  std::string mensagem = std::format("Ola, {} voce tem {} anos.\n", nome);
+  std::cout<<mensagem;
 
 
 
