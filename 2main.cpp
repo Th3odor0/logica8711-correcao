@@ -7,17 +7,19 @@ int main(){
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
 
-   int soma = 0;
+   int numero;
+   int contador = 0;
 
-   for (int i = 0; i <= 20; i++){
-    if (i % 2 == 0){
-        soma += i;
+   while (true){
+    std::cout<<"Digite um numero (0 para parar): ";
+    std::cin>>numero;
+    if (numero == 0){
+        break;
     }
-    
+    contador++;
    }
-   
+   std::cout<<"Você digitou "<<contador<<"numeros!"<<std::endl;
 
-   std::cout<<"Soma dos pares de 1 a 20: "<<soma<<std::endl;
 
 
     return 0;
