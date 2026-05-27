@@ -1,37 +1,18 @@
 #include<iostream>
 #include<Windows.h>
-
-
-bool ehPrimo(int numero){
-    if(numero <= 1){
-        return false;
-    }
-    for (int i = 2; i < numero; i++){
-        if (numero % i == 0){
-            return false;
-        }
-        
-    }
-    return true;
-}
+#include<tuple>
+#include<string>
 
 int main(){
 
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
 
-    int numero;
+    std::tuple<int, std::string, double> aluno(1, "Theodoro", 9.5);
 
-    std::cout<<"Digite um numero: "<<std::endl;
-    std::cin>>numero;
-    
-    if (ehPrimo(numero)){
-        std::cout<<numero<<" é primo"<<std::endl;
-    }else{
-        std::cout<<numero<<" Não é primo"<<std::endl;
-    }
-    
-
+    std::cout<<"ID: "<<std::get<0>(aluno)<<"\n";
+    std::cout<<"Nome: "<<std::get<1>(aluno)<<"\n";
+    std::cout<<"Nota: "<<std::get<2>(aluno)<<"\n";
 
     return 0;
 }
