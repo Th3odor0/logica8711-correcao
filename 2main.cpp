@@ -1,10 +1,15 @@
 #include<iostream>
 #include<Windows.h>
 
-int contarDigitos(int n){
-    if(n == 0) return 0;
+void tabuada(int numero, int multiplicador){
+    if(multiplicador == 0){
+        return;
+    }
 
-    return 1 + contarDigitos(n / 10);
+    tabuada(numero, multiplicador - 1);
+
+    std::cout<<numero<<" x "<<multiplicador<<" = "<<(numero * multiplicador)<<std::endl;
+
 }
 
 int main(){
@@ -12,16 +17,16 @@ int main(){
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
 
-    int numeroUsario;
+    int tabu;
+    int multi;
 
-    std::cout<<"Digite um numero inteiro: "<<std::endl;
-    std::cin>>numeroUsario;
+    std::cout<<"Digite o numero da tabuada"<<std::endl;
+    std::cin>>tabu;
 
-    if (numeroUsario == 0){
-        std::cout<<"O numero o tem 1 digito.\n";
-    }else{
-        std::cout<<"O numero "<<numeroUsario<<" tem "<<contarDigitos(numeroUsario)<<" digitos.\n";
-    }
-    
+    std::cout<<"Digite o multiplicador"<<std::endl;
+    std::cin>>multi;
+
+    std::cout<<"O resultado é: "<<tabu<<multi<<tabuada(tabu * multi)<<std::endl;
+
     return 0;
 }
