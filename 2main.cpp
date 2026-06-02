@@ -3,6 +3,10 @@
 #include<string>
 #include<cctype>
 
+void dividir(int a, int b, int*quociente, int*resto){
+  *quociente = a / b;
+  *resto = a % b;
+}
 
 
 int main(){
@@ -10,12 +14,11 @@ int main(){
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
 
-    int numero = 42;
-    int* ptr = &numero;
+  int q, r;
 
-    std::cout<<"Acessar via variavel: "<<numero<<std::endl;
-    std::cout<<"Acessar via ponteiro: "<<*ptr<<std::endl;
-   
+  dividir(17, 5, &q, &r);
+
+  std::cout<<"Quociente: "<<q<<", restos: "<<r<<std::endl;
 
 
 
