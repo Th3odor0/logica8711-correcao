@@ -3,10 +3,11 @@
 #include<string>
 #include<cctype>
 
-void dividir(int a, int b, int*quociente, int*resto){
-  *quociente = a / b;
-  *resto = a % b;
-}
+struct pessoa{
+  std::string nome;
+  int idade;
+  float altura;
+};
 
 
 int main(){
@@ -14,12 +15,15 @@ int main(){
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
 
-  int q, r;
+  pessoa pl;
 
-  dividir(17, 5, &q, &r);
+  pl.nome = "Theodoro";
+  pl.idade = 17;
+  pl.altura = 1.72;
 
-  std::cout<<"Quociente: "<<q<<", restos: "<<r<<std::endl;
-
+  std::cout<<"Nome: "<<pl.nome<<std::endl;
+  std::cout<<"Idade: "<<pl.idade<<std::endl;
+  std::cout<<"altura: "<<pl.altura<<std::endl;
 
 
     return 0;
