@@ -1,30 +1,26 @@
 #include<iostream>
-#include<Windows.h>
 #include<string>
-#include<cctype>
+#include<Windows.h>
 
-struct pessoa{
-  std::string nome;
-  int idade;
-  float altura;
+struct Pessoa{
+    std::string nome;
+    int idade;
+    float altura;
 };
-
 
 int main(){
 
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
 
-  pessoa pl;
+    Pessoa p1 = {"Theodoro", 17, 1.72};
+    Pessoa p2 = {"Pedro Henrique", 20, 1.68};
 
-  pl.nome = "Theodoro";
-  pl.idade = 17;
-  pl.altura = 1.72;
+    std::cout<<p1.nome<<" tem "<<p1.idade<<" anos"<<" e mede "<<p1.altura<<"m"<<std::endl;
+    std::cout<<p2.nome<<" tem "<<p2.idade<<" anos"<<" e mede "<<p2.altura<<"m"<<std::endl;
+   
 
-  std::cout<<"Nome: "<<pl.nome<<std::endl;
-  std::cout<<"Idade: "<<pl.idade<<std::endl;
-  std::cout<<"altura: "<<pl.altura<<std::endl;
-
+    
 
     return 0;
 }
