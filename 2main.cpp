@@ -2,18 +2,9 @@
 #include<windows.h>
 #include<string>
 
-void bubbleSport(int* arr, int tamanho){
-    for (int i = 0; i < tamanho - 1; i++){
-        for (int j = 0; j < tamanho - i - 1; j++){
-            if (arr[j] > arr[j + 1]){
-                int temp = arr[j];
-                arr[j] = arr[j + 1];
-                arr[j + 1] =  temp;
-            }
-            
-        }
-        
-    }
+int mdc(int a, int b){
+    if (b == 0) return a;
+    return mdc(b, a % b);
     
 }
 
@@ -22,19 +13,9 @@ int main(){
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
 
-    int arr[] = {64, 34, 25, 12, 22, 11, 90};
-    int tamanho = std::size(arr);
-    std::cout<<"Array original: ";
-    for (int i = 0; i < tamanho; i++){
-        std::cout<<arr[i]<<" ";
-    }
-    std::cout<<"\n";
+    std::cout<<"MDC(48, 18) = "<<mdc(48, 18)<<std::endl;
+    std::cout<<"MDC(100, 50) = "<<mdc(100, 50)<<std::endl;
 
-    bubbleSport(arr, tamanho);
-    std::cout<<"Array ordenado: ";
-    for (int i = 0; i < tamanho; i++){
-        std::cout<<arr[i]<<" ";
-    }
-    std::cout<<"\n";
+
     return 0;
 }
