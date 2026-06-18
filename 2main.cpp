@@ -2,10 +2,9 @@
 #include<string>
 #include<Windows.h>
 
-struct Jogador{
-    std::string nome;
-    std::string time;
-    int gols;
+struct CampeonatosCopa{
+    int ano;
+    std::string campeao;
 };
 
 int main(){
@@ -13,33 +12,19 @@ int main(){
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
 
-    Jogador jogadores[5];
-    
-    std::cout<<"==== COPA - RANKING DE GOLEADORES ===="<<std::endl;
+    CampeonatosCopa copa[5] = {
+        {2022, "Argentina"},
+        {2018, "França"},
+        {2014, "Alemanha"},
+        {2010, "Espanha"},
+        {2006, "Italia"}
+    };
+
+    std::cout<<"==== Campeões da Copa ===="<<std::endl;
     std::cout<<std::endl;
 
     for(int i = 0; i < 5; i++){
-        std::cout<<"Jogador "<<(i + 1)<<":"<<std::endl;
-        std::cout<<"Nome: ";
-        std::cin>>jogadores[i].nome;
-        std::cout<<"Time: ";
-        std::cin>>jogadores[i].time;
-        std::cout<<"Gols: ";
-        std::cin>>jogadores[i].gols;
-        std::cout<<std::endl;
-    }
-
-    std::cout<<"==== RANKING ===="<<std::endl;
-    std::cout<<std::endl;
-
-    for(int i = 0; i < 5 - 1; i++){
-        for(int j = 0; j < 5 - 1; j++){
-            if(jogadores[i].gols < jogadores[j + 1].gols){
-                Jogador temp = jogadores[j];
-                jogadores[j] = jogadores[j + 1];
-                jogadores[j + 1] = temp;
-            }
-        }
+        std::cout<<copa[i].ano<<" - Campeão: "<<copa[i].campeao<<std::endl;
     }
 
     return 0;
