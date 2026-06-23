@@ -1,33 +1,63 @@
 #include<iostream>
-#include<string>
-#include<Windows.h>
+#include<windows.h>
+#include<cctype>
 
 int main(){
 
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
 
-   int fila[5];
-   int inicio = 0;
-   int fim = 0;
+    int pilha[10];
+    int topo = -1;
+    int opcao;
 
-   std::cout<<"==== FILA ===="<<std::endl;
-   std::cout<<std::endl;
+    std::cout<<"===== PILHA COM MENU ====="<<std::endl;
 
-   fila[0] = 100;
-   fila[1] = 200;
-   fila[2] = 300;
-   fim = 3;
+    while(true){
+        std::cout<<std::endl;
+        std::cout<<"1. Empilhar"<<std::endl;
+        std::cout<<"2. Desempilhar"<<std::endl;
+        std::cout<<"3. Exibir Pilha"<<std::endl;
+        std::cout<<"4. Sair"<<std::endl;
+        std::cout<<"Escolha: ";
+        std::cin>>opcao;
 
-    std::cout<<"Elementos enfileirados: 100, 200, 300"<<std::endl;
-    std::cout<<std::endl;
-
-    std::cout<<"Desenfileirando..."<<std::endl;
-    while (inicio < fim){
-        std::cout<<"Removido: "<<fila[inicio]<<std::endl;
-        inicio++;
+        if(opcao == 1){
+            if(topo < 9){
+                int valor;
+                std::cout<<"Digite o valor: ";
+                std::cin>>valor;
+                topo++;
+                pilha[topo] = valor;
+                std::cout<<"Empilhado!"<<std::endl;
+            }else{
+                std::cout<<"Pilha cheia!"<<std::endl;
+            }
+        }
+        else if(opcao == 2){
+            if(topo >= 0){
+                std::cout<<"Removido: "<<pilha[topo]<<std::endl;
+                topo--;
+            }else{
+                std::cout<<"Pilha vazia!"<<std::endl;
+            }
+        }
+        else if(opcao == 3){
+            if(topo >= 0){
+                std::cout<<"Pilha: ";
+                for(int i = 0; i <= topo; i++){
+                    std::cout<<pilha[i]<<" ";
+                }
+                std::cout<<std::endl;
+            }else{
+                std::cout<<"Pilha vazia!"<<std::endl;
+            }
+        }
+        else if(opcao == 4){
+            std::cout<<"Saindo..."<<std::endl;
+            break;
+        }
     }
     
-
     return 0;
 }
