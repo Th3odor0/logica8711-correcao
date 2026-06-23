@@ -1,61 +1,29 @@
 #include<iostream>
 #include<windows.h>
-#include<cctype>
-
 int main(){
 
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
 
-    int pilha[10];
-    int topo = -1;
-    int opcao;
+    int numeros[] = {1,2,3,2,4,5,3,6};
+    int tamanho = 8;
 
-    std::cout<<"===== PILHA COM MENU ====="<<std::endl;
+    std::cout<<"==== NÚMEROS DUPLICADOS ===="<<std::endl;
+    std::cout<<std::endl;
 
-    while(true){
-        std::cout<<std::endl;
-        std::cout<<"1. Empilhar"<<std::endl;
-        std::cout<<"2. Desempilhar"<<std::endl;
-        std::cout<<"3. Exibir Pilha"<<std::endl;
-        std::cout<<"4. Sair"<<std::endl;
-        std::cout<<"Escolha: ";
-        std::cin>>opcao;
+    std::cout<<"Array: ";
+    for(int i = 0; i < tamanho; i++){
+        std::cout<<numeros[i]<<" ";
+    }
+    std::cout<<std::endl;
 
-        if(opcao == 1){
-            if(topo < 9){
-                int valor;
-                std::cout<<"Digite o valor: ";
-                std::cin>>valor;
-                topo++;
-                pilha[topo] = valor;
-                std::cout<<"Empilhado!"<<std::endl;
-            }else{
-                std::cout<<"Pilha cheia!"<<std::endl;
+    std::cout<<"Numeros duplicados: "<<std::endl;
+    for(int i = 0; i < tamanho; i++){
+        for(int j = i + 1; j < tamanho; j++){
+            if(numeros[i] == numeros[j]){
+                std::cout<<numeros[i]<<" aparece mais de uma vez!"<<std::endl;
+                break;
             }
-        }
-        else if(opcao == 2){
-            if(topo >= 0){
-                std::cout<<"Removido: "<<pilha[topo]<<std::endl;
-                topo--;
-            }else{
-                std::cout<<"Pilha vazia!"<<std::endl;
-            }
-        }
-        else if(opcao == 3){
-            if(topo >= 0){
-                std::cout<<"Pilha: ";
-                for(int i = 0; i <= topo; i++){
-                    std::cout<<pilha[i]<<" ";
-                }
-                std::cout<<std::endl;
-            }else{
-                std::cout<<"Pilha vazia!"<<std::endl;
-            }
-        }
-        else if(opcao == 4){
-            std::cout<<"Saindo..."<<std::endl;
-            break;
         }
     }
     
