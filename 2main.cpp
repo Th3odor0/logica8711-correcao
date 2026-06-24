@@ -1,41 +1,47 @@
 #include<iostream>
 #include<windows.h>
+#include<cctype>
+
 int main(){
 
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
 
-    int numeros[] = {10, 20, 30, 40, 50, 60, 70};
-    int tamanho = 8;
-    int buscado;
+    int matriz[3][4] = {
+        {10,25,5,40},
+        {15,8,30,12},
+        {20,3,18,35}
+    };
 
-    std::cout<<"==== Buscar numeros ====="<<std::endl;
-    std::cout<<std::endl;
+    int maior = matriz[0][0];
+    int menor = matriz[0][0];
+    int linhaM = 0, colunaM = 0;
+    int linhaN = 0, colunaN = 0;
 
-    std::cout<<"Array: ";
-    for (int i = 0; i < tamanho; i++){
-      std::cout<<numeros[i]<<" ";
-    }
-    std::cout<<std::endl;
+    std::cout<<"===== Min e Max em Matriz ====="<<std::endl;
 
-    std::cout<<"Digite o numero a buscar: ";
-    std::cin>>buscado;
+    std::cout<<"Matriz: "<<std::endl;
+    for(int i = 0; i < 3; i++){
+        for(int j = 0; j < 4; j++){
+            std::cout<<matriz[i][j]<<" ";
 
-    int posicao = -1;
-
-    for (int i = 0; i < tamanho; i++){
-      if (numeros[i] == buscado){
-        posicao = i;
-        break;
-      }
-      
+            if(matriz[i][j] > maior){
+                maior = matriz[i][j];
+                linhaM = i + 1;
+                colunaM = j + 1;
+            }
+            if(matriz[i][j] < menor){
+                menor = matriz[i][j];
+                linhaN = i + 1;
+                colunaN = j + 1;
+            }
+        }
+        std::cout<<std::endl;
     }
     
     std::cout<<std::endl;
-    if (posicao != -1){
-      std::cout<<"Encontrado na posição "<<posicao<<std::endl;
-    }else{
-      std::cout<<"Não encontrado!"<<std::endl;
-    }
+    std::cout<<"Maior: "<<maior<<" na posição ["<<linhaM<<"]["<<colunaM<<"]"<<std::endl;
+    std::cout<<"Menor: "<<menor<<" na posição ["<<linhaN<<"]["<<colunaN<<"]"<<std::endl;
+
     return 0;
 }
