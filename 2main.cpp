@@ -1,33 +1,40 @@
 #include<iostream>
 #include<vector>
-
+#include<Windows.h>
 
 int main(){
 
-  std::vector<int>numeros;
+    // Configura o terminal do Windows para aceitar acentuação corretamente (UTF-8)
+    SetConsoleOutputCP(CP_UTF8);
+    SetConsoleCP(CP_UTF8);
 
-  numeros.push_back(5);
-  numeros.push_back(10);
-  numeros.push_back(5);
-  numeros.push_back(15);
-  numeros.push_back(15);
-  numeros.push_back(5);
-  numeros.push_back(15);
-  
-  std::cout<<"Vector: ";
-  for (int i = 0; i < numeros.size(); i++){
-    std::cout<<numeros[i]<<" ";
-  }
+    std::vector<int> numeros;
 
-  int contador = 0;
-  for (int i = 0; i < numeros.size(); i++){
-    if (numeros[i] == 5){
-      contador++;
+    std::cout<<"Buscar elemento: "<<std::endl;
+
+    numeros.push_back(100);
+    numeros.push_back(200);
+    numeros.push_back(300);
+    numeros.push_back(400);
+
+    std::cout<<"Vector: ";
+    for(int i = 0; i < numeros.size(); i++){
+        std::cout<<numeros[i]<<" ";
     }
-  }
-  
-  std::cout<<"O numero 5 aparentes: "<<contador<<"Vezes!"<<std::endl;
 
+    int buscado = 300;
+    int posicao = -1;
 
-  return 0;
-};
+    for(int i = 0; i < numeros.size(); i++){
+        if(numeros[i] == buscado){
+            posicao = i;
+            break;
+        }
+    }
+    if(posicao != -1){
+        std::cout<<"Número "<<buscado<<" encontrado na posição "<<posicao<<std::endl;
+    }else{
+        std::cout<<"Número não encontrado!"<<std::endl;
+    }
+    return 0;
+}
