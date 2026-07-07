@@ -6,26 +6,27 @@ int main(){
 
   std::vector<int>numeros;
 
+  numeros.push_back(5);
   numeros.push_back(10);
-  numeros.push_back(20);
-  numeros.push_back(30);
-  numeros.push_back(40);
+  numeros.push_back(5);
+  numeros.push_back(15);
+  numeros.push_back(15);
+  numeros.push_back(5);
+  numeros.push_back(15);
   
-  std::cout<<"Números:";
-  std::cout<<"Soma: ";
-
+  std::cout<<"Vector: ";
   for (int i = 0; i < numeros.size(); i++){
     std::cout<<numeros[i]<<" ";
   }
 
-  int soma = 0;
+  int contador = 0;
   for (int i = 0; i < numeros.size(); i++){
-    soma += numeros[i];
+    if (numeros[i] == 5){
+      contador++;
+    }
   }
-  std::cout<<std::endl;
-
-  std::cout<<"Somando Números: "<<soma<<std::endl;
   
+  std::cout<<"O numero 5 aparentes: "<<contador<<"Vezes!"<<std::endl;
 
 
   return 0;
