@@ -24,25 +24,24 @@ int main(){
     std::cout<<"Mostrando todos os numeros: ";
 
     for (int i = 0; i < numeros.size(); i++){
-      std::cout<<numeros[i]<<std::endl;
+      std::cout<<numeros[i]<<" ";
     }
-    
+    std::cout<<std::endl;
     //mostrando todos os numeros pares da tabela
     std::cout<<"Mostrando Pares: ";
 
     for (int i = 0; i < numeros.size(); i++){
-      std::cout<<numeros[i]<<std::endl;
       if (numeros[i] % 2 == 0){
-        std::cout<<numeros[i]<<std::endl;
+        std::cout<<numeros[i]<<" ";
       }
     }
+    std::cout<<std::endl;
     //mostrando todos os numeros impares da tabela
     std::cout<<"Mostrando os impares: ";
     
     for (int i = 0; i < numeros.size(); i++){
-      std::cout<<numeros[i]<<std::endl;
       if (numeros[i] % 2 !=0){
-        std::cout<<numeros[i]<<std::endl;
+        std::cout<<numeros[i]<<" ";
       }
       
     }
