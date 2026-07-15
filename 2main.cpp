@@ -1,36 +1,26 @@
-#include <iostream>
-#include <string>
-#include <Windows.h>
-#include <vector>
-
-
-double calcularDobro(double valor1 ){
-return valor1 * 2;
-};
-
-
-double calcularTriplo(double valor2){
-    return valor2 * 3;
-}
+#include<iostream>
+#include<string>
+#include<windows.h>
+#include<cstdlib>
+#include<ctime>
+#include<cmath>
 
 
 
 int main(){
- 
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
- 
-   float numero;
-   
-   std::cout<<"Digite um numero: "<<std::endl;
-   std::cin>>numero;
 
-    double resultado1 = calcularDobro(numero);
-    double resultado2 = calcularTriplo(numero);
+    std::cout<<"Numeros impares de 1 ate 20:"<<std::endl;
 
-    std::cout<<"O dobro de "<<numero<<" e "<<resultado1<<std::endl;
-    std::cout<<"O triplo de "<<numero<<" e "<<resultado2<<std::endl;
+    // Começa em 2, vai até 20, e aumenta de 2 em 2 (i += 2)
+    for (int i = 1; i <= 20; i += 2) {
+        std::cout << i << " ";
+    }
 
+    std::cout<<std::endl;
     
+  
+
     return 0;
-}
+};
