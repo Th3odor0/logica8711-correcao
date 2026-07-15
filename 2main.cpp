@@ -11,14 +11,15 @@ int main(){
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
 
-    std::cout<<"Numeros impares de 1 ate 20:"<<std::endl;
 
-    // Começa em 2, vai até 20, e aumenta de 2 em 2 (i += 2)
-    for (int i = 1; i <= 20; i += 2) {
-        std::cout << i << " ";
+    std::cout<<"soma do 1 a 100"<<std::endl;
+    int soma = 0;
+
+    for (int i = 1; i <= 100; i++) {
+        soma  += i;
     }
 
-    std::cout<<std::endl;
+    std::cout<<soma;
     
   
 
